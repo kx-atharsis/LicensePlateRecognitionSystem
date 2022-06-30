@@ -530,27 +530,3 @@ def SplitStr(path):
     cv2.imwrite('result/Binary_img.jpg', binary_img)
     return Platename, resPlate
 
-# mkpath = "ResultImg/testmake"
-# mkdir()
-# 调用函数
-# Split()
-# # 以下代码用于建立测试集文件夹
-# testRoot = 'D:\\CCPD2019\\ccpd_base\\'
-# for file in os.listdir(testRoot):
-#     imgpath = testRoot + file
-#     CreateFloder(imgpath)
-# Split_cnn()
-
-# path = 'D:\\Test\\TeacherTest\\TestRoot\\'+'01-86_91-298&341_449&414-458&394_308&410_304&357_454&341-0_0_14_28_24_26_29-124-24.jpg'
-# imgname, img = SplitPlate.SingleImgPlate(path)
-# imgname, binary_img, SplitedImg, resPlate = SingelPlateSplit(imgname, img)
-# Platename = getName(path)
-# print(Platename)
-# print(resPlate)
-# print(Platename)
-# cv2.imshow('Plate', img)
-# cv2.imshow('Binary_img', binary_img)
-# cv2.waitKey(0)
-# 导入easyocr
-
-
