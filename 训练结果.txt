@@ -1,0 +1,183 @@
+**********
+epoch: 1, train loss: 0.0551, train acc: 0.0699
+Test Loss: 3.449860, Acc: 0.109726
+**********
+epoch: 2, train loss: 0.0537, train acc: 0.1133
+Test Loss: 3.369306, Acc: 0.117207
+**********
+epoch: 3, train loss: 0.0524, train acc: 0.1520
+Test Loss: 3.291002, Acc: 0.172070
+**********
+epoch: 4, train loss: 0.0510, train acc: 0.2162
+Test Loss: 3.208063, Acc: 0.223192
+**********
+epoch: 5, train loss: 0.0496, train acc: 0.2931
+Test Loss: 3.119777, Acc: 0.299252
+**********
+epoch: 6, train loss: 0.0481, train acc: 0.3679
+Test Loss: 3.027420, Acc: 0.391521
+**********
+epoch: 7, train loss: 0.0465, train acc: 0.4649
+Test Loss: 2.925866, Acc: 0.433915
+**********
+epoch: 8, train loss: 0.0448, train acc: 0.5211
+Test Loss: 2.820204, Acc: 0.523691
+**********
+epoch: 9, train loss: 0.0429, train acc: 0.5890
+Test Loss: 2.698845, Acc: 0.561097
+**********
+epoch: 10, train loss: 0.0409, train acc: 0.6151
+Test Loss: 2.562639, Acc: 0.629676
+**********
+epoch: 11, train loss: 0.0387, train acc: 0.6607
+Test Loss: 2.423661, Acc: 0.653367
+**********
+epoch: 12, train loss: 0.0363, train acc: 0.6985
+Test Loss: 2.274529, Acc: 0.662095
+**********
+epoch: 13, train loss: 0.0339, train acc: 0.7183
+Test Loss: 2.114093, Acc: 0.703242
+**********
+epoch: 14, train loss: 0.0314, train acc: 0.7565
+Test Loss: 1.957982, Acc: 0.763092
+**********
+epoch: 15, train loss: 0.0288, train acc: 0.7983
+Test Loss: 1.800741, Acc: 0.807980
+**********
+epoch: 16, train loss: 0.0264, train acc: 0.8371
+Test Loss: 1.650018, Acc: 0.866584
+**********
+epoch: 17, train loss: 0.0240, train acc: 0.8863
+Test Loss: 1.495481, Acc: 0.899002
+**********
+epoch: 18, train loss: 0.0218, train acc: 0.9062
+Test Loss: 1.369233, Acc: 0.907731
+**********
+epoch: 19, train loss: 0.0199, train acc: 0.9182
+Test Loss: 1.254949, Acc: 0.916459
+**********
+epoch: 20, train loss: 0.0182, train acc: 0.9240
+Test Loss: 1.145802, Acc: 0.937656
+**********
+epoch: 21, train loss: 0.0166, train acc: 0.9391
+Test Loss: 1.046376, Acc: 0.935162
+**********
+epoch: 22, train loss: 0.0153, train acc: 0.9372
+Test Loss: 0.961649, Acc: 0.950125
+**********
+epoch: 23, train loss: 0.0141, train acc: 0.9435
+Test Loss: 0.891369, Acc: 0.947631
+**********
+epoch: 24, train loss: 0.0131, train acc: 0.9516
+Test Loss: 0.829957, Acc: 0.943890
+**********
+epoch: 25, train loss: 0.0123, train acc: 0.9511
+Test Loss: 0.777133, Acc: 0.956359
+**********
+epoch: 26, train loss: 0.0115, train acc: 0.9529
+Test Loss: 0.736383, Acc: 0.962594
+**********
+epoch: 27, train loss: 0.0109, train acc: 0.9581
+Test Loss: 0.704537, Acc: 0.946384
+**********
+epoch: 28, train loss: 0.0103, train acc: 0.9578
+Test Loss: 0.666996, Acc: 0.962594
+**********
+epoch: 29, train loss: 0.0099, train acc: 0.9626
+Test Loss: 0.640286, Acc: 0.965087
+**********
+epoch: 30, train loss: 0.0094, train acc: 0.9650
+Test Loss: 0.606971, Acc: 0.965087
+**********
+epoch: 31, train loss: 0.0091, train acc: 0.9653
+Test Loss: 0.583978, Acc: 0.968828
+**********
+epoch: 32, train loss: 0.0087, train acc: 0.9658
+Test Loss: 0.555349, Acc: 0.972569
+**********
+epoch: 33, train loss: 0.0084, train acc: 0.9695
+Test Loss: 0.547976, Acc: 0.963840
+**********
+epoch: 34, train loss: 0.0081, train acc: 0.9678
+Test Loss: 0.532605, Acc: 0.966334
+**********
+epoch: 35, train loss: 0.0079, train acc: 0.9694
+Test Loss: 0.519992, Acc: 0.967581
+**********
+epoch: 36, train loss: 0.0077, train acc: 0.9710
+Test Loss: 0.500358, Acc: 0.967581
+**********
+epoch: 37, train loss: 0.0076, train acc: 0.9706
+Test Loss: 0.491491, Acc: 0.968828
+**********
+epoch: 38, train loss: 0.0073, train acc: 0.9719
+Test Loss: 0.480563, Acc: 0.968828
+**********
+epoch: 39, train loss: 0.0072, train acc: 0.9726
+Test Loss: 0.470778, Acc: 0.968828
+**********
+epoch: 40, train loss: 0.0071, train acc: 0.9727
+Test Loss: 0.464328, Acc: 0.970075
+**********
+epoch: 41, train loss: 0.0069, train acc: 0.9746
+Test Loss: 0.460262, Acc: 0.975062
+**********
+epoch: 42, train loss: 0.0068, train acc: 0.9757
+Test Loss: 0.442657, Acc: 0.971322
+**********
+epoch: 43, train loss: 0.0067, train acc: 0.9750
+Test Loss: 0.442002, Acc: 0.973815
+**********
+epoch: 44, train loss: 0.0066, train acc: 0.9776
+Test Loss: 0.438380, Acc: 0.970075
+**********
+epoch: 45, train loss: 0.0065, train acc: 0.9764
+Test Loss: 0.426378, Acc: 0.972569
+**********
+epoch: 46, train loss: 0.0064, train acc: 0.9765
+Test Loss: 0.424072, Acc: 0.972569
+**********
+epoch: 47, train loss: 0.0063, train acc: 0.9771
+Test Loss: 0.416508, Acc: 0.973815
+**********
+epoch: 48, train loss: 0.0062, train acc: 0.9782
+Test Loss: 0.419792, Acc: 0.973815
+**********
+epoch: 49, train loss: 0.0062, train acc: 0.9782
+Test Loss: 0.403034, Acc: 0.972569
+**********
+epoch: 50, train loss: 0.0061, train acc: 0.9785
+Test Loss: 0.401263, Acc: 0.973815
+**********
+epoch: 51, train loss: 0.0060, train acc: 0.9788
+Test Loss: 0.397781, Acc: 0.972569
+**********
+epoch: 52, train loss: 0.0060, train acc: 0.9796
+Test Loss: 0.396173, Acc: 0.973815
+**********
+epoch: 53, train loss: 0.0059, train acc: 0.9796
+Test Loss: 0.395196, Acc: 0.973815
+**********
+epoch: 54, train loss: 0.0059, train acc: 0.9805
+Test Loss: 0.393873, Acc: 0.972569
+**********
+epoch: 55, train loss: 0.0058, train acc: 0.9798
+Test Loss: 0.386118, Acc: 0.973815
+**********
+epoch: 56, train loss: 0.0057, train acc: 0.9798
+Test Loss: 0.380638, Acc: 0.973815
+**********
+epoch: 57, train loss: 0.0057, train acc: 0.9789
+Test Loss: 0.390279, Acc: 0.972569
+**********
+epoch: 58, train loss: 0.0057, train acc: 0.9802
+Test Loss: 0.376151, Acc: 0.972569
+**********
+epoch: 59, train loss: 0.0056, train acc: 0.9799
+Test Loss: 0.381028, Acc: 0.973815
+**********
+epoch: 60, train loss: 0.0056, train acc: 0.9812
+Test Loss: 0.367544, Acc: 0.973815
+
+进程已结束，退出代码为 0
+
