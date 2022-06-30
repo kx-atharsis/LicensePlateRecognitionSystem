@@ -131,9 +131,3 @@ def SingleImgPlate(path):
     img = resize(img, 220, 70)
 
     return imgname, img
-
-
-# imgname, img = SingleImgPlate('D:\\Test\\TeacherTest\\TestRoot\\'+'01-86_91-298&341_449&414-458&394_308&410_304&357_454&341-0_0_14_28_24_26_29-124-24.jpg')
-# cv2.imshow('Plate',img)
-# cv2.waitKey(0)
-#DataLoad()
