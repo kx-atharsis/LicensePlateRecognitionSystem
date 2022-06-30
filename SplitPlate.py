@@ -1,3 +1,5 @@
+"""用于车牌定位并分割出车牌"""
+
 import cv2
 import numpy as np
 import os
@@ -9,28 +11,29 @@ from PIL import Image, ImageDraw, ImageFont
 
 def DrawBox(im, box):
     draw = ImageDraw.Draw(im)
-    draw.rectangle([tuple(box[0]), tuple(box[1])],  outline="#FFFFFF", width=3)
+    draw.rectangle([tuple(box[0]), tuple(box[1])], outline="#FFFFFF", width=3)
+
 
 # --- 绘制四个关键点
 
 
 def DrawPoint(im, points):
-
     draw = ImageDraw.Draw(im)
 
     for p in points:
         center = (p[0], p[1])
         radius = 5
-        right = (center[0]+radius, center[1]+radius)
-        left = (center[0]-radius, center[1]-radius)
+        right = (center[0] + radius, center[1] + radius)
+        left = (center[0] - radius, center[1] - radius)
         draw.ellipse((left, right), fill="#FF0000")
+
 
 # --- 绘制车牌
 def DrawLabel(im, label):
     draw = ImageDraw.Draw(im)
-   # draw.multiline_text((30,30), label.encode("utf-8"), fill="#FFFFFF")
     font = ImageFont.truetype('simsun.ttc', 64)
     draw.text((30, 30), label, font=font)
+
 
 # --- 图片可视化
 def ImgShow(imgpath, box, points, label):
@@ -49,11 +52,13 @@ def transform(img, points, height, width):
     processed = cv2.warpPerspective(img, M, (width, height))
     return processed
 
+
 # 调整图像大小
 def resize(img, height, width):
     img_size = (height, width)
     resized_img = cv2.resize(img, img_size)
     return resized_img
+
 
 # 保存车牌图像, 修改保存路径，可保存到不同文件夹下
 def ImgSave(imgpath, points, height, width):
@@ -66,15 +71,15 @@ def ImgSave(imgpath, points, height, width):
     im = transform(im, points, height, width)
     # 调整图像大小
     im = resize(im, 220, 70)
-    # 显示图片
-    # cv2.imshow("img", im)
-    print(save_dir+imgname)
+    print(save_dir + imgname)
     # 保存车牌图片
-    cv2.imwrite(save_dir+imgname+'.jpg', im)
+    cv2.imwrite(save_dir + imgname + '.jpg', im)
 
+
+# 用于集中测试的车牌定位分离
 def DataLoad():
     # 车牌集路径
-    testRoot = 'D:\\AAAA\\Test\\TeacherTest\\TestRoot\\'
+    testRoot = 'D:\\code\\Python\\LicensePlateRecognitionSystem\\TeacherTest\\TestRoot\\'
     for file in os.listdir(testRoot):
         imgpath = testRoot + file
         # 图像名
@@ -101,6 +106,7 @@ def DataLoad():
         ImgSave(imgpath, points, height, width)
 
 
+# 部分预处理：规范关键点、倾斜矫正、规范图像大小
 def SingleImgPlate(path):
     imgpath = path
     # 图像名
