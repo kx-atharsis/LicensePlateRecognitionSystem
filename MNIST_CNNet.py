@@ -53,57 +53,58 @@ if torch.cuda.is_available():
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=learning_rate, weight_decay=0.1)
 
-if __name__ == '__main__':  # 训练数据
-    for epoch in range(num_epoches):
-        train_loss = 0
-        train_acc = 0
-        model.train()  # 开启训练模式，即启用batch normalization和drop out
-        for data in train_dataloader:  # data为train_loader中的一个批次样本
-            img, label = data
-            if torch.cuda.is_available():
-                img = Variable(img).cuda()
-                label = Variable(label).cuda()
-            else:
-                img = Variable(img)
-                label = Variable(label)
-            # ==========forward====================
-            out = model(img)
-            loss = criterion(out, label)
-            # ==========backward===================
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-            # =========record loss=================
-            train_loss += loss.data / len(train_datafile)
+# 以下代码用于训练数据，得到训练模型参数
+# if __name__ == '__main__':  # 训练数据
+#     for epoch in range(num_epoches):
+#         train_loss = 0
+#         train_acc = 0
+#         model.train()  # 开启训练模式，即启用batch normalization和drop out
+#         for data in train_dataloader:  # data为train_loader中的一个批次样本
+#             img, label = data
+#             if torch.cuda.is_available():
+#                 img = Variable(img).cuda()
+#                 label = Variable(label).cuda()
+#             else:
+#                 img = Variable(img)
+#                 label = Variable(label)
+#             # ==========forward====================
+#             out = model(img)
+#             loss = criterion(out, label)
+#             # ==========backward===================
+#             optimizer.zero_grad()
+#             loss.backward()
+#             optimizer.step()
+#             # =========record loss=================
+#             train_loss += loss.data / len(train_datafile)
 
-            _, pred = torch.max(out, 1)
-            num_correct = (pred == label).sum()
-            train_acc += num_correct.numpy() / len(train_datafile)
+#             _, pred = torch.max(out, 1)
+#             num_correct = (pred == label).sum()
+#             train_acc += num_correct.numpy() / len(train_datafile)
 
-        # 输出阶段训练结果
-        print('*' * 10)
-        print('epoch: {}, train loss: {:.4f}, train acc: {:.4f}'.format(epoch + 1, train_loss, train_acc))
+#         # 输出阶段训练结果
+#         print('*' * 10)
+#         print('epoch: {}, train loss: {:.4f}, train acc: {:.4f}'.format(epoch + 1, train_loss, train_acc))
 
-        # 测试数据
-        model.eval()  # 让model变为测试模式，网络会沿用batch normalization的值，但不使用drop out
-        eval_loss = 0
-        eval_acc = 0
-        with torch.no_grad():
-            for data in test_dataloader:
-                img, label = data
-                if torch.cuda.is_available():
-                    img = Variable(img).cuda()
-                    label = Variable(label).cuda()
-                else:
-                    img = Variable(img)
-                    label = Variable(label)
-                out = model(img)
-                loss = criterion(out, label)
-                eval_loss += loss.data * label.size(0)
-                _, pred = torch.max(out, 1)
-                num_correct = (pred == label).sum()
-                eval_acc += num_correct.data
-        print('Test Loss: {:.6f}, Acc: {:.6f}'.format(eval_loss.numpy() / (len(test_datafile)),
-                                                      eval_acc.numpy() / (len(test_datafile))))
+#         # 测试数据
+#         model.eval()  # 让model变为测试模式，网络会沿用batch normalization的值，但不使用drop out
+#         eval_loss = 0
+#         eval_acc = 0
+#         with torch.no_grad():
+#             for data in test_dataloader:
+#                 img, label = data
+#                 if torch.cuda.is_available():
+#                     img = Variable(img).cuda()
+#                     label = Variable(label).cuda()
+#                 else:
+#                     img = Variable(img)
+#                     label = Variable(label)
+#                 out = model(img)
+#                 loss = criterion(out, label)
+#                 eval_loss += loss.data * label.size(0)
+#                 _, pred = torch.max(out, 1)
+#                 num_correct = (pred == label).sum()
+#                 eval_acc += num_correct.data
+#         print('Test Loss: {:.6f}, Acc: {:.6f}'.format(eval_loss.numpy() / (len(test_datafile)),
+#                                                       eval_acc.numpy() / (len(test_datafile))))
 
-    torch.save(model.state_dict(), 'ResultModel.pkl')  # 训练结束，保存模型参数
+#     torch.save(model.state_dict(), 'ResultModel.pkl')  # 训练结束，保存模型参数
